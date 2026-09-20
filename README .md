@@ -94,4 +94,4 @@ rebuilds automatically within a minute or so.
 Vanilla HTML, CSS, and JavaScript. Google Fonts (Space Grotesk, Inter,
 JetBrains Mono) load via CDN. The particle field, cursor, boot sequence,
 and every interactive diagram are hand-written — no animation or 3D
-libraries.
+libraries.     
