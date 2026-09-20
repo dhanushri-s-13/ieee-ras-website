@@ -294,3 +294,4 @@ document.querySelectorAll('.faq-question').forEach(function (btn) {
   window.addEventListener('resize', function () { resize(); makeParticles(); });
   frame();
 })();
+   
