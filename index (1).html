@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  QUICK EDIT GUIDE — replace these before you submit:
+  1. "[Your College Name]"        → search this file, appears twice
+  2. Stats in #identity           → your chapter's real member/event counts
+  3. Signal-stage copy in #signal → fine to leave; it's generic and true
+  4. Project cards in #lab        → real member projects (swap placeholders)
+  5. Events in #events            → real event names + dates
+  6. Names/roles in #community    → your actual office bearers
+  7. FAQ fee answer in #faq       → your chapter's real membership fee
+  8. Contact email & socials      → in the footer
+  ============================================================
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IEEE RAS — Engineering in Motion</title>
+<meta name="description" content="IEEE Robotics &amp; Automation Society student chapter — autonomous systems, competitive robotics, workshops, and a hands-on build community.">
+<meta property="og:title" content="IEEE RAS — Engineering in Motion">
+<meta property="og:description" content="The student chapter for robotics and automation — autonomous systems, competitive robotics, and hands-on build culture.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="boot-screen" aria-hidden="true">
+  <div class="boot-inner">
+    <div class="boot-lines">
+      <p class="boot-line">&gt; INITIALIZING RAS SYSTEM<span class="ok">...</span></p>
+      <p class="boot-line">&gt; LOADING ROBOTICS MODULE<span class="ok">...</span></p>
+      <p class="boot-line">&gt; CALIBRATING INTERFACE<span class="ok">...</span></p>
+      <p class="boot-line">&gt; CONNECTING SYSTEMS<span class="ok">...</span></p>
+      <p class="boot-line">&gt; SYSTEM READY <span class="ok">✓</span></p>
+    </div>
+    <div class="boot-progress"><div class="boot-progress-bar"></div></div>
+  </div>
+</div>
+
+<div id="cursor-dot" aria-hidden="true"></div>
+<div id="cursor-ring" aria-hidden="true"></div>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div id="scroll-bar" aria-hidden="true"></div>
+
+<div class="scroll-indicator" aria-hidden="true">
+  <div class="scroll-indicator-num mono">01</div>
+  <div class="scroll-indicator-line"><div class="scroll-indicator-fill"></div></div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top"><span>IEEE</span><span>RAS</span></a>
+    <ul class="nav-links">
+      <li><a href="#identity">About</a></li>
+      <li><a href="#domains">Domains</a></li>
+      <li><a href="#lab">Projects</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#community">Team</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-status mono"><span class="dot"></span>RAS SYSTEM ONLINE</div>
+      <a class="nav-cta" href="#join">[ CONNECT → ]</a>
+    </div>
+    <button class="nav-toggle mono" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">☰</button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-menu-close mono" aria-label="Close menu">✕</button>
+  <a href="#identity">About</a>
+  <a href="#domains">Domains</a>
+  <a href="#lab">Projects</a>
+  <a href="#events">Events</a>
+  <a href="#community">Team</a>
+  <a href="#join">Join</a>
+</div>
+
+<main id="top">
+
+  <section class="hero wrap">
+    <div class="glow-blob orange"></div>
+    <div class="glow-blob cyan"></div>
+    <div class="hero-label mono">IEEE ROBOTICS &amp; AUTOMATION SOCIETY<br>[Your College Name]</div>
+    <h1>Engineering<br>in motion.</h1>
+    <p class="hero-sub">Where robotics, automation, and intelligent systems move from ideas to
+    reality — built by students, one working prototype at a time.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary magnetic" href="#domains">Explore RAS →</a>
+      <a class="btn btn-ghost magnetic" href="#lab">View Projects</a>
+    </div>
+    <div class="status-readout">
+      <div><span class="k">SYSTEM</span><span class="v">ROBOTICS</span></div>
+      <div><span class="k">STATUS</span><span class="v">ACTIVE</span></div>
+      <div><span class="k">MODE</span><span class="v">EXPLORATION</span></div>
+    </div>
+  </section>
+
+  <section id="identity">
+    <div class="wrap">
+      <div class="section-label mono">01 — IDENTITY</div>
+      <div class="identity-grid">
+        <div class="reveal">
+          <h2>We build systems<br>that move.</h2>
+          <p class="lede">IEEE RAS is the student chapter for robotics and automation. We
+          design autonomous systems, run hands-on build sessions, and send teams to national
+          competitions — turning circuit diagrams into things that actually move.</p>
+          <div class="glance-strip">
+            <div class="glance-cell"><b data-target="120" data-suffix="+">0</b><span>Active members</span></div>
+            <div class="glance-cell"><b data-target="15">0</b><span>Workshops / year</span></div>
+            <div class="glance-cell"><b data-target="8">0</b><span>Competitions entered</span></div>
+          </div>
+        </div>
+        <div class="pipeline">
+          <div class="pipeline-step reveal"><h3 class="mono">IDEA</h3><p>A problem worth solving, sketched on a whiteboard.</p></div>
+          <div class="pipeline-step reveal"><h3 class="mono">DESIGN</h3><p>CAD models, circuit schematics, and a parts list.</p></div>
+          <div class="pipeline-step reveal"><h3 class="mono">PROTOTYPE</h3><p>The first version — usually held together with tape.</p></div>
+          <div class="pipeline-step reveal"><h3 class="mono">CONTROL</h3><p>Firmware, tuning, and the debugging that never quite ends.</p></div>
+          <div class="pipeline-step reveal"><h3 class="mono">DEPLOY</h3><p>Demoed, competed with, and handed down to the next batch.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="domains">
+    <div class="wrap reveal">
+      <div class="section-label mono">02 — DOMAINS</div>
+      <div class="section-head"><h2>The system has<br>many layers.</h2></div>
+      <div class="domain-grid">
+        <button class="domain-module" aria-expanded="false">
+          <span class="domain-index mono">01</span><h3>Robotics</h3>
+          <div class="domain-desc">Mechanical design, actuation, and the physical bodies our systems live in.</div>
+        </button>
+        <button class="domain-module" aria-expanded="false">
+          <span class="domain-index mono">02</span><h3>Automation</h3>
+          <div class="domain-desc">Systems that run a process end-to-end with minimal human input.</div>
+        </button>
+        <button class="domain-module" aria-expanded="false">
+          <span class="domain-index mono">03</span><h3>Control Systems</h3>
+          <div class="domain-desc">The feedback loops and tuning that keep a robot stable and predictable.</div>
+        </button>
+        <button class="domain-module" aria-expanded="false">
+          <span class="domain-index mono">04</span><h3>Embedded Systems</h3>
+          <div class="domain-desc">Microcontrollers, firmware, and the code that runs closest to the hardware.</div>
+        </button>
+        <button class="domain-module" aria-expanded="false">
+          <span class="domain-index mono">05</span><h3>Computer Vision</h3>
+          <div class="domain-desc">Letting a robot make sense of a camera feed in real time.</div>
+        </button>
+        <button class="domain-module" aria-expanded="false">
+          <span class="domain-index mono">06</span><h3>Intelligent Systems</h3>
+          <div class="domain-desc">Lightweight decision-making layered on top of everything else here.</div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section id="signal">
+    <div class="wrap reveal">
+      <div class="section-label mono">03 — SIGNAL TO ACTION</div>
+      <div class="section-head">
+        <h2>From signal<br>to action.</h2>
+        <p class="lede">Click a stage to see how data actually moves through a robotic system,
+        end to end.</p>
+      </div>
+      <div class="signal-track" role="tablist" aria-label="Signal pipeline stages">
+        <div class="signal-line"></div>
+        <div class="signal-dot"></div>
+        <button class="signal-stage" role="tab" aria-selected="true"
+          data-input="Environmental data" data-process="Sensor acquisition"
+          data-output="Digital signal" data-tech="Sensors, IoT, embedded systems">SENSING</button>
+        <button class="signal-stage" role="tab" aria-selected="false"
+          data-input="Raw digital signal" data-process="Filtering and feature extraction"
+          data-output="Structured sensor data" data-tech="Signal processing, computer vision">PERCEPTION</button>
+        <button class="signal-stage" role="tab" aria-selected="false"
+          data-input="Structured sensor data" data-process="Rule-based or learned decision logic"
+          data-output="A chosen action" data-tech="Control theory, lightweight ML">DECISION</button>
+        <button class="signal-stage" role="tab" aria-selected="false"
+          data-input="Chosen action" data-process="Translating intent into motor commands"
+          data-output="Control signal" data-tech="PID control, motor drivers">CONTROL</button>
+        <button class="signal-stage" role="tab" aria-selected="false"
+          data-input="Control signal" data-process="Physical movement or output"
+          data-output="Real-world action" data-tech="Motors, servos, actuators">ACTUATION</button>
+      </div>
+      <div class="signal-panel">
+        <div class="signal-panel-grid">
+          <div><span class="mono">INPUT</span><p id="signal-input"></p></div>
+          <div><span class="mono">PROCESS</span><p id="signal-process"></p></div>
+          <div><span class="mono">OUTPUT</span><p id="signal-output"></p></div>
+        </div>
+        <div class="signal-tech mono" id="signal-tech"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="twin">
+    <div class="wrap reveal">
+      <div class="section-label mono">04 — SYSTEM SCHEMATIC</div>
+      <div class="section-head">
+        <h2>Inside a working<br>robot.</h2>
+        <p class="lede">A simplified schematic of what's actually inside most of our builds.
+        Click a component to read what it does.</p>
+      </div>
+      <div class="schematic">
+        <div class="schematic-diagram">
+          <svg viewBox="0 0 300 300" aria-hidden="true">
+            <line x1="150" y1="150" x2="150" y2="45" stroke="#313a46" stroke-width="1"/>
+            <line x1="150" y1="150" x2="252" y2="96" stroke="#313a46" stroke-width="1"/>
+            <line x1="150" y1="150" x2="252" y2="204" stroke="#313a46" stroke-width="1"/>
+            <line x1="150" y1="150" x2="150" y2="255" stroke="#313a46" stroke-width="1"/>
+            <line x1="150" y1="150" x2="48" y2="204" stroke="#313a46" stroke-width="1"/>
+          </svg>
+          <button class="twin-node active" style="top:50%; left:50%;"
+            data-title="Processor" data-desc="Handles heavier compute — vision or planning — when the microcontroller alone isn't enough.">PROCESSOR</button>
+          <button class="twin-node" style="top:15%; left:50%;"
+            data-title="Sensor" data-desc="Reads the environment — distance, light, orientation — and turns it into raw signal.">SENSOR</button>
+          <button class="twin-node" style="top:32%; left:84%;"
+            data-title="Controller" data-desc="The microcontroller running the logic that decides what happens next.">CONTROLLER</button>
+          <button class="twin-node" style="top:68%; left:84%;"
+            data-title="Communication" data-desc="Wireless or wired links back to a controller, base station, or another robot.">COMMS</button>
+          <button class="twin-node" style="top:85%; left:50%;"
+            data-title="Motor" data-desc="Converts electrical signal into physical motion.">MOTOR</button>
+          <button class="twin-node" style="top:68%; left:16%;"
+            data-title="Power" data-desc="Batteries and regulation — the part everyone forgets about until it runs out.">POWER</button>
+        </div>
+        <div class="schematic-panel">
+          <h3 id="schematic-title" class="mono">PROCESSOR</h3>
+          <p id="schematic-desc"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="lab">
+    <div class="wrap reveal">
+      <div class="section-label mono">05 — PROJECT LAB</div>
+      <div class="section-head">
+        <h2>Built in the lab.</h2>
+        <p class="lede">Placeholder projects below — swap these for real member builds before
+        you submit.</p>
+      </div>
+      <div class="lab-panel">
+        <div class="lab-index mono">PROJECT<br>01</div>
+        <div>
+          <h3>Line Tracer X1</h3>
+          <p>A PID-tuned line-following bot built during Build Week; placed in the top three
+          at [add event name].</p>
+          <div class="lab-meta">
+            <div><span>STATUS</span><b>PROTOTYPE</b></div>
+            <div><span>DOMAIN</span><b>ROBOTICS</b></div>
+            <div><span>STACK</span><b>ARDUINO / C++</b></div>
+          </div>
+        </div>
+      </div>
+      <div class="lab-panel">
+        <div class="lab-index mono">PROJECT<br>02</div>
+        <div>
+          <h3>SentryCam</h3>
+          <p>A pan-tilt camera turret with basic object tracking, built independently outside
+          of any formal track.</p>
+          <div class="lab-meta">
+            <div><span>STATUS</span><b>PROTOTYPE</b></div>
+            <div><span>DOMAIN</span><b>COMPUTER VISION</b></div>
+            <div><span>STACK</span><b>PYTHON / OPENCV</b></div>
+          </div>
+        </div>
+      </div>
+      <div class="lab-panel">
+        <div class="lab-index mono">PROJECT<br>03</div>
+        <div>
+          <h3>AgroBot Mini</h3>
+          <p>A soil-moisture sensing rover prototype, built for a sustainability-themed
+          hackathon.</p>
+          <div class="lab-meta">
+            <div><span>STATUS</span><b>CONCEPT</b></div>
+            <div><span>DOMAIN</span><b>AUTOMATION</b></div>
+            <div><span>STACK</span><b>ESP32 / SENSORS</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="events">
+    <div class="wrap reveal">
+      <div class="section-label mono">06 — EVENTS</div>
+      <div class="section-head"><h2>What we run.</h2></div>
+      <div class="event-list">
+        <div class="event-row reveal">
+          <div class="event-tag mono">WORKSHOP</div>
+          <div class="event-name">Microcontrollers &amp; Embedded C</div>
+          <div class="event-note">[Add date]</div>
+        </div>
+        <div class="event-row reveal">
+          <div class="event-tag mono">TECH TALK</div>
+          <div class="event-name">Guest Lecture Series</div>
+          <div class="event-note">[Add date]</div>
+        </div>
+        <div class="event-row reveal">
+          <div class="event-tag mono">HACKATHON</div>
+          <div class="event-name">Build Week</div>
+          <div class="event-note">[Add date]</div>
+        </div>
+        <div class="event-row reveal">
+          <div class="event-tag mono">COMPETITION</div>
+          <div class="event-name">Robotics Meet</div>
+          <div class="event-note">[Add date]</div>
+        </div>
+        <div class="event-row reveal">
+          <div class="event-tag mono">DEMONSTRATION</div>
+          <div class="event-name">End-of-semester showcase</div>
+          <div class="event-note">[Add date]</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="community">
+    <div class="wrap reveal">
+      <div class="section-label mono">07 — COMMUNITY</div>
+      <div class="section-head"><h2>Built by people.<br>Driven by curiosity.</h2></div>
+      <div class="community-grid">
+        <div class="community-card"><div class="community-avatar mono">C</div><h3>[Add Name]</h3><div class="community-role">Chair</div></div>
+        <div class="community-card"><div class="community-avatar mono">VC</div><h3>[Add Name]</h3><div class="community-role">Vice Chair</div></div>
+        <div class="community-card"><div class="community-avatar mono">S</div><h3>[Add Name]</h3><div class="community-role">Secretary</div></div>
+        <div class="community-card"><div class="community-avatar mono">T</div><h3>[Add Name]</h3><div class="community-role">Treasurer</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap reveal">
+      <div class="section-label mono">08 — FAQ</div>
+      <div class="section-head"><h2>Before you ask.</h2></div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">Do I need robotics experience to join?<span class="faq-icon mono">+</span></button>
+          <div class="faq-answer"><p>No. Most members start with zero hardware experience — that's what Build Week and the workshops are for.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What's the weekly time commitment?<span class="faq-icon mono">+</span></button>
+          <div class="faq-answer"><p>It varies by track and season — expect a couple of hours a week outside of event crunch periods.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Is there a membership fee?<span class="faq-icon mono">+</span></button>
+          <div class="faq-answer"><p>[Add your chapter's fee structure here, or say membership is free if it is.]</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Can I join without being in a technical program?<span class="faq-icon mono">+</span></button>
+          <div class="faq-answer"><p>Yes — teams need documentation, outreach, and event coordination as much as they need firmware.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="join" class="cta-section">
+    <div class="wrap reveal">
+      <div class="section-label mono" style="text-align:center;">09 — JOIN</div>
+      <h2>Ready to build<br>what comes next?</h2>
+      <p class="lede">Explore. Build. Experiment. Automate.</p>
+      <div class="steps">
+        <div class="step"><div><h3>Submit the interest form</h3><p>Tell us which track you want — or that you're still deciding.</p></div></div>
+        <div class="step"><div><h3>Attend orientation</h3><p>Meet the chapter, your track lead, and your mentors.</p></div></div>
+        <div class="step"><div><h3>Pick your first build</h3><p>Join a team, or pitch an independent project.</p></div></div>
+      </div>
+      <div class="hero-ctas" style="justify-content:center; margin-top:36px;">
+        <a class="btn btn-primary magnetic" href="mailto:ieee.ras@yourcollege.edu">Join IEEE RAS →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-row">
+      <div class="brand brand-row mono" style="font-size:0.95rem;">IEEE RAS <span class="brand-sub">/ [Your College Name]</span></div>
+      <ul class="foot-links">
+        <li><a href="mailto:ieee.ras@yourcollege.edu">Contact</a></li>
+        <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+    <div class="foot-readout">
+      <span>SYSTEM STATUS: <b>ONLINE</b></span>
+      <span>INTERFACE: <b>ACTIVE</b></span>
+      <span>VERSION: <b>01.0</b></span>
+    </div>
+    <div class="foot-fadeline"></div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
